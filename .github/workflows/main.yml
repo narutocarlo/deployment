@@ -28,4 +28,4 @@ jobs:
           aws-region: "ap-south-1"
 
       - name: Deploy to S3 bucket
-        run: aws s3 sync ./dist/s3://deployment-build-live/testing/ 
+        run: aws s3 sync /s3://deployment-build-live/testing/ 
