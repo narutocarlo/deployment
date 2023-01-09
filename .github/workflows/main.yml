@@ -25,7 +25,7 @@ jobs:
         with:
           aws-access-key-id: "AKIASNY55P627K6ZG2HX"
           aws-secret-access-key: "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"
-          aws-region: global
+          aws-region: Asia Pacific (Mumbai) ap-south-1
 
       - name: Deploy to S3 bucket
         run: s3://deployment-build-live/testing/ 
