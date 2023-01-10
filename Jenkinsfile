@@ -13,7 +13,7 @@ pipeline {
                 sh "maven test"
             }
         }
-        stage("Deployment stagr"){
+        stage("Deployment stage"){
             steps {
                 withMaven(maven : 3.8.7)
                 sh "maven deploy"
