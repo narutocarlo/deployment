@@ -19,9 +19,16 @@ pipeline {
         //         sh "maven deploy"
         //     }
         // }
-        stage('Build') { 
+        stage('installing pakages') { 
             steps {
                 sh 'npm install' 
+
+            }
+           
+        }
+        stage('Build') { 
+            steps {
+                sh 'npm run build' 
 
             }
            
