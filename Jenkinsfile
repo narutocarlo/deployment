@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+    stages {
+        stage('Compile Stage') {
+            steps {
+                withMaven(maven : 3.8.7)
+                sh "maven clean compile"
+            }
+        }
+        stage("Testing"){
+            steps {
+                withMaven(maven : 3.8.7)
+                sh "maven test"
+            }
+        }
+        stage("Deployment stagr"){
+            steps {
+                withMaven(maven : 3.8.7)
+                sh "maven deploy"
+            }
+        }
+    }
+
+}
