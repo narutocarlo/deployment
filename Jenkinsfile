@@ -9,13 +9,13 @@ pipeline {
         }
         stage("Testing"){
             steps {
-                withMaven(maven : 3.8.7)
+                withMaven(maven : maven3_8_7)
                 sh "maven test"
             }
         }
         stage("Deployment stage"){
             steps {
-                withMaven(maven : 3.8.7)
+                withMaven(maven : maven3_8_7)
                 sh "maven deploy"
             }
         }
