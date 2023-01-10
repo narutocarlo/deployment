@@ -1,22 +1,32 @@
 pipeline {
     agent any
     stages {
-        stage('Compile Stage') {
+        // stage('Compile Stage') {
+        //     steps {
+        //         withMaven(maven : 3.8.7)
+        //         sh "maven clean compile"
+        //     }
+        // }
+        // stage("Testing"){
+        //     steps {
+        //         withMaven(maven : 3.8.7)
+        //         sh "maven test"
+        //     }
+        // }
+        // stage("Deployment stage"){
+        //     steps {
+        //         withMaven(maven : 3.8.7)
+        //         sh "maven deploy"
+        //     }
+        // }
+        stage('Build') { 
             steps {
-                withMaven(maven : 3.8.7)
-                sh "maven clean compile"
+                sh 'npm install' 
+
             }
-        }
-        stage("Testing"){
             steps {
-                withMaven(maven : 3.8.7)
-                sh "maven test"
-            }
-        }
-        stage("Deployment stage"){
-            steps {
-                withMaven(maven : 3.8.7)
-                sh "maven deploy"
+                sh 'npm run build' 
+                
             }
         }
     }
