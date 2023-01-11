@@ -51,8 +51,8 @@ pipeline {
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
 ]]) {
     sh "ls"
-        
-            // sh "aws s3 sync ./build s3://my-project1995"
+        sh "npm install @aws-sdk/client-s3"
+            sh "aws s3 sync ./build s3://my-project1995"
 }
     }
   }
