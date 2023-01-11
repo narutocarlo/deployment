@@ -50,9 +50,7 @@ pipeline {
         accessKeyVariable: 'AWS_ACCESS_KEY_ID',
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
 ]]) {
-     sh """
-                    echo uname=$USERNAME pwd=$PASSWORD
-                    """
+        sh "aws sts get-caller-identity"
                 //   sh "aws s3 sync ./build s3://my-static-bucket-jenkins"
 
 }
