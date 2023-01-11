@@ -57,14 +57,14 @@ pipeline {
   }
 
 
-        // stage('deploy') {
-        //     steps {
-        //       sh "aws configure set region ap-south-1" 
-        //       sh "aws configure set aws_access_key_id AKIASNY55P627K6ZG2HX"  
-        //       sh "aws configure set aws_secret_access_key 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"
-        //       sh "aws s3 cp ./build s3://my-static-bucket-jenkins"
-        //     }
-        // }
+        stage('deploy') {
+            steps {
+              sh "aws configure set region ap-south-1" 
+              sh "aws configure set aws_access_key_id AKIASNY55P627K6ZG2HX"  
+              sh "aws configure set aws_secret_access_key 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"
+              sh "aws s3 cp ./build s3://my-static-bucket-jenkins"
+            }
+        }
         
     }
 
