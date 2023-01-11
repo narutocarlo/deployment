@@ -51,8 +51,7 @@ pipeline {
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
 ]]) {
         
-              sh "aws s3 cp ./build s3://my-static-bucket-jenkins"
-
+s3Upload(folder:'./build', bucket:'my-project1995', path:'./')
 }
     }
   }
