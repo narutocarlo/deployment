@@ -47,8 +47,8 @@ pipeline {
       withCredentials([[
         $class: 'AmazonWebServicesCredentialsBinding',
         credentialsId: "aws-key",
-        accessKeyVariable: 'AKIASNY55P627K6ZG2HX',
-        secretKeyVariable: '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'
+        accessKeyVariable: 'AKIASNY55P62SK4EFW5O',
+        secretKeyVariable: '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'
 ]]) {
     sh "aws s3 ls"
         
@@ -63,8 +63,8 @@ pipeline {
         //     steps {
                
         //         sh "aws configure set region ap-south-1" 
-        //         sh "aws configure set aws_access_key_id AKIASNY55P627K6ZG2HX"  
-        //         sh "aws configure set aws_secret_access_key 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"
+        //         sh "aws configure set aws_access_key_id AKIASNY55P62SK4EFW5O"  
+        //         sh "aws configure set aws_secret_access_key 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"
         //         sh "aws s3 sync ./build s3://my-project1995"
             
         //     }
