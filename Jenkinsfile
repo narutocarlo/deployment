@@ -51,7 +51,7 @@ pipeline {
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
 ]]) {
         
-s3Upload(file:'./build', bucket:'my-project1995', path:'.')
+s3Upload(file:'build', bucket:'my-project1995', path:'./build')
 }
     }
   }
