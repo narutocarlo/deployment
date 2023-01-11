@@ -44,8 +44,13 @@ pipeline {
   stage("List S3 buckets") {
 
     steps{
-     withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
-    // some block
+      withCredentials([[
+        $class: 'AmazonWebServicesCredentialsBinding',
+        credentialsId: "credentials-id-here",
+        accessKeyVariable: 'AWS_ACCESS_KEY_ID',
+        secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
+]]) {
+    // AWS Code
 }
     }
   }
