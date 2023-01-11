@@ -50,7 +50,7 @@ pipeline {
         accessKeyVariable: 'AKIASNY55P62SK4EFW5O',
         secretKeyVariable: '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'
 ]]) {
-    sh "aws s3 ls"
+    // sh "echo ${aws-key} "
         
 }
     }
