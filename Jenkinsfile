@@ -44,9 +44,10 @@ pipeline {
   stage("List S3 buckets") {
 
     steps{
-        withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'aws-key', usernameVariable: 'AKIASNY55P627K6ZG2HX', passwordVariable: 'aRUGbhDrnt1F08mX07fQ8mBW9u84g/6HvjFpdVt4']]) {
-        AWS("--region=ap-south-1 s3 ls")
-    }}
+     withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
+    // some block
+}
+    }
   }
 
 
