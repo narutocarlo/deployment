@@ -49,11 +49,10 @@ pipeline {
         credentialsId: "credentials-id-here",
         accessKeyVariable: 'AWS_ACCESS_KEY_ID',
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
-
-
-]]) {
-        
-         stage('deploy') {
+]]) 
+    }
+  }    
+stage('deploy') {
             steps {
               sh "aws configure set region ap-south-1" 
               sh "aws configure set aws_access_key_id AKIASNY55P627K6ZG2HX"  
@@ -62,12 +61,10 @@ pipeline {
             }
         }
 
-}
-    }
-  }
+    
 
 
-       
+        
         
     }
 
