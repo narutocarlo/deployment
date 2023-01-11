@@ -47,8 +47,8 @@ pipeline {
       withCredentials([[
         $class: 'AmazonWebServicesCredentialsBinding',
         credentialsId: "aws-key",
-        accessKeyVariable: 'AWS_ACCESS_KEY_ID',
-        secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
+        accessKeyVariable: 'AKIASNY55P627K6ZG2HX',
+        secretKeyVariable: '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'
 ]]) {
     sh "aws s3 ls"
         
