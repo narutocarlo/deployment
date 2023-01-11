@@ -50,8 +50,9 @@ pipeline {
         accessKeyVariable: 'AWS_ACCESS_KEY_ID',
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
 ]]) {
+    sh "ls"
         
-            sh "aws s3 sync ./build s3://my-project1995"
+            // sh "aws s3 sync ./build s3://my-project1995"
 }
     }
   }
