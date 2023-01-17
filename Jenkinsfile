@@ -3,9 +3,9 @@
 pipeline {
     agent any
     stages {
-        stage('list') { 
+        stage('Delete Previous Image') { 
             steps {
-                sh  'ls'
+                sh  'sudo docker rmi "test_imge"'
             }
            
         }
