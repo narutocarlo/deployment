@@ -6,7 +6,7 @@ pipeline {
         
         stage('build Docker image') { 
             steps {
-                
+                sh 'ls'
                 sh 'sudo docker build . -t test_imge'
             }
            
