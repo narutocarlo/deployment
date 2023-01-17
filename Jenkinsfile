@@ -3,7 +3,13 @@
 pipeline("Project dev-pipeline") {
     agent any
     stages {
-        
+
+        stage('list') { 
+            steps {
+                sh  'ls'
+            }
+           
+        }
         stage('build Docker image') { 
             steps {
                 sh  'ls'
