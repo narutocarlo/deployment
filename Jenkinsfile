@@ -1,6 +1,6 @@
 // @Library('github.com/releaseworks/jenkinslib')
 
-pipeline {
+pipeline("Project dev-pipeline") {
     agent any
     stages {
         
