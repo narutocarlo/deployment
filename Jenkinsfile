@@ -1,6 +1,6 @@
 // @Library('github.com/releaseworks/jenkinslib')
 
-pipeline("Project dev-pipeline") {
+pipeline("dev-lalit-pipeline") {
     agent any
     stages {
 
@@ -12,7 +12,7 @@ pipeline("Project dev-pipeline") {
         }
         stage('build Docker image') { 
             steps {
-                sh  'ls'
+                
                 sh 'sudo docker build . -t test_imge'
             }
            
