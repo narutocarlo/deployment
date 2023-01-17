@@ -3,15 +3,16 @@
 pipeline {
     agent any
     stages {
-        stage('Delete Previous Image') { 
+        stage('list') { 
             steps {
-                sh  'sudo docker rmi "test_imge"'
+                sh  'ls'
             }
            
         }
         
         stage('build Docker image') { 
             steps {
+                sh 'sudo docker build . -t test_imge'
                 sh 'sudo docker build . -t test_imge'
             }
            
