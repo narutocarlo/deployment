@@ -7,17 +7,16 @@ pipeline {
         stage('build Docker image') { 
             steps {
                 sh ' sudo docker build . -t test_imge'
-                sh 'sudo docker run -dp 3000:3000 test_imge '
             }
            
         }
 
-         stage('build Docker image') { 
-            steps {
-                sh 'sudo docker run -dp 3000:3000 test_imge '
-            }
+        //  stage('build Docker image') { 
+        //     steps {
+        //         sh 'sudo docker run -dp 3000:3000 test_imge '
+        //     }
            
-        }       
+        // }       
 //         stage("Deploy") {
 
 //             steps{
