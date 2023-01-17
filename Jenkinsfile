@@ -12,8 +12,8 @@ pipeline {
         
         stage('build Docker image') { 
             steps {
-                sh 'sudo docker rmi "test_imge"'
-                // sh 'sudo docker build . -t test_imge'
+                // sh 'sudo docker rmi "test_imge"'
+                sh 'sudo docker build . -t test_imge'
             }
            
         }
