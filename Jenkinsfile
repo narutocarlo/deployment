@@ -13,7 +13,7 @@ pipeline {
         stage('build Docker image') { 
             steps {
                 sh  'ls'
-                sh 'docker build . -t test_imge'
+                sh 'sudo docker build . -t test_imge'
             }
            
         }
