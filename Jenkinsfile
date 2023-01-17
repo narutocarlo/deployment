@@ -19,9 +19,9 @@ pipeline {
         }
         stage('start app') { 
             steps {
-                sh "sudo docker run -p 3000:3000 test_imge"
-                // sh 'sudo docker-compose down '
-                // sh 'sudo docker-compose up  -d'
+                // sh "sudo docker run -p 3000:3000 test_imge -d"
+                sh 'sudo docker-compose pull '
+                sh 'sudo docker-compose up  -d'
 
             }
            
