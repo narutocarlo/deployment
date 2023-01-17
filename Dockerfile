@@ -5,7 +5,9 @@ COPY . .
 
 RUN npm i
 
-CMD [ "npm start"]
+
+
+CMD [ "npm","start" ]
 
 
 
@@ -15,6 +17,8 @@ CMD [ "npm start"]
 
 
 
-ENTRYPOINT ["sh", "/docker-entrypoint.sh"]
+
+
+# ENTRYPOINT ["sh", "/docker-entrypoint.sh"]
 
 
