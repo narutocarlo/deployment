@@ -19,7 +19,7 @@ pipeline {
         stage('start app') { 
             steps {
                 sh 'sudo docker-compose down'
-                // sh 'sudo docker-compose up -d'
+                sh 'sudo docker-compose up -d'
 
             }
            
