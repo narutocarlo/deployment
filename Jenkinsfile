@@ -12,8 +12,15 @@ pipeline {
         
         stage('build Docker image') { 
             steps {
-                sh  'ls'
                 sh 'sudo docker build . -t test_imge'
+            }
+           
+        }
+        stage('start app') { 
+            steps {
+                sh 'sudo docker-compose down'
+                sh 'sudo docker-compose down'
+
             }
            
         }
