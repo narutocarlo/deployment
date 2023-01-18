@@ -12,7 +12,7 @@ function App() {
         <h1> hey i am Lalit Kishor Upadhyay</h1>
         <div  >
 
-        {/* <h3>i  am a Developer</h3> */}
+        <h3>i  am a Developer</h3>
         </div>
 
         <a
